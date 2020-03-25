@@ -1,13 +1,14 @@
-# URI Online Judge
+<p align="center">
+    <img src="logo.png">
+</p>
 
-## Why Python?
+<h1>URI Online Judge</h1>
 
--   Versatile language
--   Friendly syntax
--   Great learning curve
--   Fast problem solving with built-in functions and libraries
--   No need to reinvent the wheel
+<h2>Why Python?</h2
 
-## 2020 ICPC World Finals - Python 3 Installed Modules
+- Versatile language
+- Friendly syntax
+- Great learning curve
+- Handy built-in functions and libraries
 
-<p>Please download the PDF to view it: <a href="WF2020.pypy3.modules.pdf">Download PDF</a>.</p>
+<h2>2020 ICPC World Finals - Python 3 <a href="WF2020.pypy3.modules.pdf" target="_blank">Installed Modules</a></h2>
