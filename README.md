@@ -4,7 +4,7 @@
 
 <h1>URI Online Judge</h1>
 
-<h2>Why Python?</h2
+<h2>Why Python?</h2>
 
 - Versatile language
 - Friendly syntax
