@@ -1,5 +1,5 @@
 # 2715 - Dividindo os Trabalhos I
-# Solution developed by Lucas Ferreira (BALSAQUE)
+# BALSAQUE
 while True:
     try:
         n = int(input())

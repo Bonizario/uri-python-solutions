@@ -1,4 +1,5 @@
 # 1258 - T-Shirts
+# BALSAQUE
 mask = {'P': '{0}', 'M': '{1}', 'G': '{2}'}
 N = int(input())
 

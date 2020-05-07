@@ -1,5 +1,5 @@
 # 1766 - O Elfo das Trevas
-# Adaptation of the solution developed by Lucas Ferreira (BALSAQUE)
+# BALSAQUE
 for i in range(1, int(input()) + 1):
     print("CENARIO {" + str(i) + "}")
 

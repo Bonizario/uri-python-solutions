@@ -1,5 +1,5 @@
 # 2288 - Tv da Vovó
-# Solution developed by Lucas Ferreira (BALSAQUE)
+# BALSAQUE
 test = 1
 while True:
 	lines, columns = map(int,input().split())
