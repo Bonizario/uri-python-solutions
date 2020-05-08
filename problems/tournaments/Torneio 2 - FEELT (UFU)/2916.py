@@ -1,21 +1,25 @@
-# # 2916 - The Note
-mod = 1000000007
-while True:
-    try:
-        entry = input().split()
-        N = int(entry[0])
+# 2916 - The Note
+def main():
+    from sys import stdin, stdout
 
-        # handling inputs in multiple lines (same behavior as scanf / cin)
-        while len(entry) <= N + 1:
-            entry += input().split()
+    mod = 1000000007
+    while True:
+        try:
+            entries = stdin.readline().split()
+            N = int(entries[0])
+            while len(entries) <= N + 1:
+                entries += stdin.readline().split()
+            K = int(entries[1])
+            notes = [int(x) for x in entries[2:]]
+        except Exception:
+            break
 
-        K = int(entry[1])
-        notas = list(map(int, entry[2:]))
-    except EOFError:
-        break
+        notes.sort(reverse=True)
+        result = 0
+        for i in range(K):
+            result += notes[i]
+        result %= mod
+        stdout.write('%d\n' % result)
 
-    notas.sort(reverse=True)
-    soma = 0
-    for i in range(K):
-        soma += notas[i]
-    print(soma % mod)
+if __name__ == '__main__':
+    main()
