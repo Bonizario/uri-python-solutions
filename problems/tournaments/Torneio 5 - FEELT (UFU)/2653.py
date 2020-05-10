@@ -1,10 +1,15 @@
 # 2653 - Dijkstra
-jewels = set()
+def main():
+    from sys import stdout
 
-while True:
-    try:
-        jewels.add(input())
-    except EOFError:
-        break
+    jewels = set()
+    while True:
+        try:
+            jewels.add(input())
+        except EOFError:
+            break
 
-print(len(jewels))
+    stdout.write(str(len(jewels)) + '\n')
+
+if __name__ == '__main__':
+    main()

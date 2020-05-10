@@ -1,11 +1,10 @@
 # 1144 - Logical Sequence
-def printSequence(initial_number):
-    print("{} {} {}".format(initial_number,
-                            initial_number ** 2, initial_number ** 3))
-    print("{} {} {}".format(initial_number,
-                            initial_number ** 2 + 1, initial_number ** 3 + 1))
+def main():
+    from sys import stdin, stdout
 
+    for i in range(1, int(stdin.readline()) + 1):
+        stdout.write('%d %d %d\n' % (i, i*i, i*i*i))
+        stdout.write('%d %d %d\n' % (i, i*i + 1, i*i*i + 1))
 
-N = int(input())
-for i in range(1, N + 1):
-    printSequence(i)
+if __name__ == '__main__':
+    main()

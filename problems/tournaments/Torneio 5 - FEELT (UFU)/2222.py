@@ -1,18 +1,22 @@
 # 2222 - Playing with Sets
-for _ in range(int(input())):
-    sets = []
-    for _ in range(int(input())):
-        size, *nums = map(int, input().split())
-        nums = set(nums)
-        sets.append(tuple((size, nums)))
+def main():
+    from sys import stdin, stdout
+    for _ in range(int(stdin.readline())):
+        sets = []
+        for _ in range(int(stdin.readline())):
+            size, *nums = [int(k) for k in stdin.readline().split()]
+            nums = set(nums)
+            sets.append(tuple((size, nums)))
 
-    for _ in range(int(input())):
-        op, X, Y = map(int, input().split())
+        for _ in range(int(stdin.readline())):
+            op, X, Y = [int(k) for k in stdin.readline().split()]
 
-        # X and Y are tuples: (size, [nums])
-        if op == 1:
-            result = sets[X-1][1].intersection(sets[Y-1][1])
-        else:
-            result = sets[X-1][1].union(sets[Y-1][1])
+            # X and Y are tuples: (size, [nums])
+            if op == 1:
+                result = sets[X-1][1].intersection(sets[Y-1][1])
+            else:
+                result = sets[X-1][1].union(sets[Y-1][1])
 
-        print(len(result))
+            stdout.write(str(len(result)) + '\n')
+if __name__ == '__main__':
+    main()

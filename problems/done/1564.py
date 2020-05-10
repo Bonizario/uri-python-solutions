@@ -1,10 +1,17 @@
 # 1564 - Brazil World Cup
-while True:
-    try:
-        cup = int(input())
-        if not cup:
-            print('vai ter copa!')
+def main():
+    from sys import stdout
+
+    while True:
+        try:
+            cup = input()
+        except EOFError:
+            break
+
+        if cup == '0':
+            stdout.write('vai ter copa!\n')
         else:
-            print('vai ter duas!')
-    except EOFError:
-        break
+            stdout.write('vai ter duas!\n')
+
+if __name__ == '__main__':
+    main()
