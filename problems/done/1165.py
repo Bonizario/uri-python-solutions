@@ -1,18 +1,37 @@
 # 1165 - Prime Number
-def is_prime(x):
-    # if 1 was a possible input
-    # if (n <= 1):
-    #     return False
-    for i in range(2, x):  # 2 doesn't entry the loop
-        if (x % i == 0):
-            return False
-    return True
+def main():
+    from sys import stdin, stdout
 
+    for _ in range(int(stdin.readline())):
+        X = int(stdin.readline())
 
-n = int(input())
-for _ in range(n):
-    x = int(input())
-    if is_prime(x):
-        print('{} eh primo'.format(x))
-    else:
-        print('{} nao eh primo'.format(x))
+        if X == 1:
+            stdout.write('1 nao eh primo\n')
+            continue
+
+        prime = 1
+        i = 2
+        while i*i <= X:
+            if X % i == 0: # check if i divides X without leaving a remainder
+                prime = 0
+                break
+            i += 1
+
+        if prime:
+            stdout.write('%d eh primo\n' % X)
+        else:
+            stdout.write('%d nao eh primo\n' % X)
+
+if __name__ == '__main__':
+    main()
+
+# def is_prime(n): # n >= 1
+#     if n == 1:
+#         return False
+
+#     i = 2
+#     while i*i <= n: # loop from 2 to int(sqrt(x))
+#         if n % i == 0: # check if i divides x without leaving a remainder
+#             return False # so it is not a prime number
+#         i += 1
+#     return True
