@@ -1,15 +1,8 @@
-# Jupyter notebook
-.ipynb_checkpoints
-URI-2020.ipynb
-
 # Extra material
 material
 
 # Unfinished exercices
-staging
-
-# Interesting exercises
-collection
+problems/staging
 
 # VSCode configs
 .vscode
