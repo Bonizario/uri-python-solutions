@@ -1,7 +1,7 @@
 # 2867 - LENGTH OF LOOONG INTEGERS
 def main():
     from sys import stdin, stdout
-    from math import log10 # (inaccurate for extremely long lengths, use len(str(int)))
+    from math import log10 # (inaccurate for extremely long lengths, use len(str))
 
     C = int(stdin.readline())
     for _ in range(C):
