@@ -1,8 +1,9 @@
-# Extra material
-material
-
-# Unfinished exercices
-problems/staging
-
 # VSCode configs
 .vscode
+
+# Unfinished exercices
+doing
+
+# C/C++ executables
+**/*.exe
+**/*.o
