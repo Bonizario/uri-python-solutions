@@ -1,25 +1,22 @@
 # 1025 - BINARY SEARCH -> 1ST OCCURENCE OF A VALUE
-def binary_search_1st_occurence(elements, value, N):
-    left, right = 0, N
-
-    while left <= right:
-        middle = (left + right) // 2
-
-        if elements[middle] == value:
-            """adaptation to find the 1st occurence"""
-            while middle >= 0 and elements[middle] == value:
-                middle -= 1
-            middle += 1
-            """end"""
-            return middle
-
-        if elements[middle] < value:
-            left = middle + 1
-        elif elements[middle] > value:
-            right = middle - 1
-
 def main():
     from sys import stdin, stdout
+
+    def binary_search_1st_occurence(elements, value, N):
+        left = 0
+        right = N - 1
+        ans = -1
+
+        while left <= right:
+            middle = left + (right - left) // 2
+
+            if elements[middle] == value:
+                ans = middle
+            if elements[middle] >= value:
+                right = middle - 1
+            else:
+                left = middle + 1
+        return ans
 
     case = 1
     while True:
@@ -31,11 +28,12 @@ def main():
         marbles.sort()
         for _ in range(Q):
             query = int(stdin.readline())
-            index = binary_search_1st_occurence(marbles, query, N-1)
-            if index is not None:
+            index = binary_search_1st_occurence(marbles, query, N)
+            if index != -1:
                 stdout.write('%d found at %d\n' % (query, index+1))
             else:
                 stdout.write('%d not found\n' % query)
         case += 1
-if __name__ == '__main__':
-    main()
+
+
+main()
