@@ -13,7 +13,6 @@
 #define MAXM 100001 // max number of edges
 
 using namespace std;
-
 struct t_edge {
     int cost, x, y;
 };
@@ -23,7 +22,6 @@ bool comp(t_edge a, t_edge b) {
 }
 
 t_edge edge[MAXM], mst[MAXM]; // input -> edge; mst -> output
-
 
 int parent[MAXM], weight[MAXM]; // union find functions
 
@@ -75,7 +73,6 @@ int main() {
 
     for (i = 1; i < N; i++) // printing the minimum-spanning-tree
         cout << mst[i].x << " " << mst[i].y << " " << mst[i].cost << "\n";
-
 
     return 0;
 }
