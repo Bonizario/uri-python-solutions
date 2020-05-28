@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <functional>  // greater<int>()
 #include <vector>
 
 using namespace std;

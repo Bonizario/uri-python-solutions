@@ -36,8 +36,8 @@ void join(int x, int y) {
 
     if (x == y) return;
 
-    if (parent[x] < parent[y]) parent[x] = y;
-    else if (parent[y] < parent[x]) parent[y] = x;
+    if (weight[x] < weight[y]) parent[x] = y;
+    else if (weight[y] < weight[x]) parent[y] = x;
     else {
         parent[y] = x;
         weight[x]++;
