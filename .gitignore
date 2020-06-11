@@ -1,8 +1,5 @@
-# VSCode configs
-.vscode
-
 # Unfinished exercices
-doing
+**/doing
 
 # C/C++ executables
 **/*.exe

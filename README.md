@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="logo.png">
+    <img src="/assets/logo.png">
 </p>
 
 <h1>URI Online Judge</h1>
