@@ -1,21 +1,4 @@
-/*
-    Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge
-    of the least possible weight that connects any two trees in the forest.
-    It is a greedy algorithm in graph theory as it finds a minimum spanning tree
-    for a connected weighted graph adding increasing cost arcs at each step.
-    This means it finds a subset of the edges that forms a tree that includes
-    every vertex, where the total weight of all the edges in the tree is
-    >minimized<.
-*/
-
-/**
- * URI Online Judge | 2173
- * Caixa Dois
- * Por Guilherme Silva, ITA BR Brazil
- * Timelimit: 2
-*/
-
-// Solução estilo Felipe, com Union retornando um inteiro, sem array mst
+// SoluÃ§Ã£o estilo Felipe, com Union retornando um inteiro, sem array mst
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -44,7 +27,7 @@ unsigned Find(unsigned A) {
     return G[A] = Find(G[A]);
 }
 
-// ATENÇÃO, USE -1 EM EXERCÍCIOS QUE OS NÓS COMEÇAM EM 0
+// ATENÃ‡ÃƒO, USE -1 EM EXERCÃCIOS QUE OS NÃ“S COMEÃ‡AM EM 0
 unsigned Union(unsigned A, unsigned B) {
     A = Find(A), B = Find(B);
     if (A == B)
@@ -70,7 +53,7 @@ int main() {
         cin >> n >> m;
         if (n == 0 && m == 0) break;
 
-        for (i = 1; i <= n; i++) // USE NÚMERO DE NÓS E NÃO "M"
+        for (i = 1; i <= n; i++) // USE NÃšMERO DE NÃ“S E NÃƒO "M"
             G[i] = i, S[i] = 1;
 
         for (i = 1; i <= m; i++)
@@ -81,14 +64,14 @@ int main() {
         sort(E + 1, E + 1 + m, CmpCrescente);
         for (i = 1; i <= m; i++) {
             esq = Union(E[i].X, E[i].Y);
-            if (esq) { // USE esq != -1 PARA EXERCÍCIOS QUE OS NÓS COMEÇAM EM 0
+            if (esq) { // USE esq != -1 PARA EXERCÃCIOS QUE OS NÃ“S COMEÃ‡AM EM 0
                 rouboMin += E[i].C;
                 if (S[esq] == n) break;
             }
         }
 
         // Limpando arrays do Union-Find
-        for (i = 1; i <= n; i++) // USE NÚMERO DE NÓS E NÃO "M"
+        for (i = 1; i <= n; i++) // USE NÃšMERO DE NÃ“S E NÃƒO "M"
             G[i] = i, S[i] = 1;
 
         sort(E + 1, E + 1 + m, CmpDecrescente);
@@ -106,7 +89,8 @@ int main() {
     return 0;
 }
 
-// Solução estilo Neps, com array mst
+// SoluÃ§Ã£o estilo Neps, com array mst
+/*
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -157,7 +141,7 @@ int main() {
         cin >> n >> m;
         if (n == 0 && m == 0) break;
 
-        for (i = 1; i <= n; i++) // USE NÚMERO DE NÓS E NÃO "M"
+        for (i = 1; i <= n; i++) // USE NÃšMERO DE NÃ“S E NÃƒO "M"
             G[i] = i, S[i] = 1;
 
         E.clear(), E.resize(m + 1);
@@ -182,7 +166,7 @@ int main() {
         }
 
         // Limpando arrays do Union-Find
-        for (i = 1; i <= n; i++) // USE NÚMERO DE NÓS E NÃO "M"
+        for (i = 1; i <= n; i++) // USE NÃšMERO DE NÃ“S E NÃƒO "M"
             G[i] = i, S[i] = 1;
 
         tamanho = 0;
@@ -190,7 +174,7 @@ int main() {
         for (i = 1; i <= m; i++) {
             if (Find(E[i].X) != Find(E[i].Y)) {
                 Union(E[i].X, E[i].Y);
-                // Colocar m no for acima ao invés de n falha no caso:
+                // Colocar m no for acima ao invÃ©s de n falha no caso:
                 // 3 2
                 // 2 1 86
                 // 1 3 34
@@ -211,3 +195,4 @@ int main() {
 
     return 0;
 }
+*/
