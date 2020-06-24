@@ -2,9 +2,11 @@
   <img alt="URI Online Judge" title="URI Online Judge" src="assets/uri-logo.png">
 </p>
 
-<h2 align="center">The main goal of URI is to provide programming practice and knowledge sharing</h2>
+<h2 align="center">The main goal of URI is to provide programming practice and knowledge sharing</h3>
 
-<h3 align="center">Their platform contains more than 2000 problems divided in 9 categories, here are some Python 3 and C++ solutions that I developed</h3>
+<h3 align="center">Their platform contains more than 2000 problems divided in 9 categories, here are some Python 3 and C++ solutions that I developed</h2>
+
+<br />
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Bonizario/uri-solutions?color=d61635">
