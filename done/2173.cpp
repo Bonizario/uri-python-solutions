@@ -66,7 +66,7 @@ int main() {
             esq = Union(E[i].X, E[i].Y);
             if (esq) { // USE esq != -1 PARA EXERCÍCIOS QUE OS NÓS COMEÇAM EM 0
                 rouboMin += E[i].C;
-                if (S[esq] == n) break;
+                // if (S[esq] == n) break;
             }
         }
 
@@ -79,7 +79,7 @@ int main() {
             esq = Union(E[i].X, E[i].Y);
             if (esq) {
                 rouboMax += E[i].C;
-                if (S[esq] == n) break;
+                // if (S[esq] == n) break;
             }
         }
 
@@ -90,7 +90,6 @@ int main() {
 }
 
 // Solução estilo Neps, com array mst
-/*
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -168,17 +167,17 @@ int main() {
         // Limpando arrays do Union-Find
         for (i = 1; i <= n; i++) // USE NÚMERO DE NÓS E NÃO "M"
             G[i] = i, S[i] = 1;
+        // Colocar m no for acima ao invés de n falha no caso:
+        // 3 2
+        // 2 1 86
+        // 1 3 34
+        // 0 0
 
         tamanho = 0;
         sort(E.begin() + 1, E.end(), CmpDecrescente);
         for (i = 1; i <= m; i++) {
             if (Find(E[i].X) != Find(E[i].Y)) {
                 Union(E[i].X, E[i].Y);
-                // Colocar m no for acima ao invés de n falha no caso:
-                // 3 2
-                // 2 1 86
-                // 1 3 34
-                // 0 0
                 // cout<<E[i].X<<" "<<E[i].Y<<" "<<E[i].C<<"\n";
                 mst[++tamanho] = E[i];
             }
@@ -195,4 +194,3 @@ int main() {
 
     return 0;
 }
-*/
