@@ -298,9 +298,9 @@ int BinarySearch(int arr[], int target, int N) {
 
 <br />
 
-# :postbox: Contato
+# :postbox: Contact
 
-Desenvolvido por **Gabriel Bonizário** 👋🏻
+Developed by **Gabriel Bonizário** 👋🏻
 
 **Linkedin**: [gabriel-bonizario](https://www.linkedin.com/in/gabriel-bonizario/)
 
