@@ -58,19 +58,19 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-	cin >> n >> m;
-	cin >> cidade_succa >> cidade_noic;
+    cin >> n >> m;
+    cin >> cidade_succa >> cidade_noic;
 
-	for (int i = 1; i <= m; i++) {
-		int x, y, tempo;
-		cin >> x >> y >> tempo;
-		// Em alguns exercícios o grafo NÃO é bidirecional!!
-		vizinhos[x].push_back( pii(tempo, y) );
-		vizinhos[y].push_back( pii(tempo, x) );
-	}
+    for (int i = 1; i <= m; i++) {
+        int x, y, tempo;
+        cin >> x >> y >> tempo;
+        // Em alguns exercícios o grafo NÃO é bidirecional!!
+        vizinhos[x].push_back( pii(tempo, y) );
+        vizinhos[y].push_back( pii(tempo, x) );
+    }
 
-	Dijkstra(cidade_succa);
-	cout << distancia[cidade_noic] << "\n";
+    Dijkstra(cidade_succa);
+    cout << distancia[cidade_noic] << "\n";
 
-	return 0;
+    return 0;
 }

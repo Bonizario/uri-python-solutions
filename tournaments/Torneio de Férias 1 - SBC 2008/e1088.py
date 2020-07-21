@@ -17,7 +17,7 @@ def main():
                 # curr swaps to place num[i] in num[num[i]]
                 # curr - 1 swaps to place num[num[i]] in num[i]
                 # swaps += 2 * curr - 1
-                swaps = 1 # 2 * curr - 1 is always odd, we can just increment by 1
+                swaps += 1 # 2 * curr - 1 is always odd, we can just increment by 1
             else:
                 i += 1
         stdout.write('%s\n' % ('Marcelo' if swaps & 1 else 'Carlos'))
