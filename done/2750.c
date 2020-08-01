@@ -4,11 +4,14 @@ void traces();
 
 int main()
 {
-    int i;
     traces();
-    for (i = 0; i < 5; i++)
+    printf("|  decimal  |  octal  |  Hexadecimal  |\n");
+    traces();
+
+    int i;
+    for (i = 0; i <= 15; i++)
     {
-        printf("|%*c|\n", 37, ' ');
+        printf("|     %*d    |   %*o    |      %*X       |\n", 2, i, 2, i, 2, i);
     }
     traces();
 

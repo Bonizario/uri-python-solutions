@@ -2,7 +2,8 @@
 def main():
     from sys import stdin
 
-    keynum = lambda num: (abs(num)%M * (1 if num>=0 else -1), -1*(num&1), num * (-1 if num&1 else 1))
+    keynum = lambda num: (abs(num) % M * (1 if num >= 0 else -1),
+                         -1 * (num & 1), num * (-1 if num & 1 else 1))
 
     while True:
         entry = input()
