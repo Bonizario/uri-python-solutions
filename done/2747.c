@@ -1,27 +1,14 @@
 #include <stdio.h>
 
-void traces();
-
 int main()
 {
     int i;
-    traces();
+    printf("---------------------------------------\n");
     for (i = 0; i < 5; i++)
     {
         printf("|%*c|\n", 37, ' ');
     }
-    traces();
+    printf("---------------------------------------\n");
 
     return 0;
-}
-
-void traces()
-{
-    int i;
-    for (i = 0; i < 39; i++)
-    {
-        putchar('-');
-    }
-    putchar('\n');
-    return;
 }
