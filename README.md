@@ -35,6 +35,32 @@
 
 # :books: Algorithms
 
+## Binary Search
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int BinarySearch(int arr[], int target, int N) {
+    int mid, L = 0, R = N - 1;
+
+    while (L <= R) {
+        mid = L + (R - L) / 2;
+
+        if (arr[mid] == target)
+            return mid;
+        if (arr[mid] < target)
+            L = mid + 1;
+        else
+            R = mid - 1;
+    }
+
+    return -1;
+}
+```
+
+<br />
+
 ## Graph Representation - Adjacency List
 
 ```cpp
@@ -156,7 +182,7 @@ using namespace std;
 int G[MAXN], S[MAXN]; // Parents, Sizes
 
 // Recursive
-int Find(int A) { 
+int Find(int A) {
     if (G[A] == A)
         return A;
     return G[A] = Find(G[A]);
@@ -168,7 +194,7 @@ int Find(int A) {
         G[A] = G[G[A]];
         A = G[A];
     }
-    return A; 
+    return A;
 }
 
 int Union(int A, int B) {
@@ -212,7 +238,7 @@ t_edge Edge[MAXM], MST[MAXM];
 // Union-Find Functions
 int G[MAXN], S[MAXN];
 
-int Find(int A) { 
+int Find(int A) {
     if (G[A] == A)
         return A;
     return G[A] = Find(G[A]);
@@ -252,7 +278,7 @@ int main() {
         int E = Union(Edge[i].X, Edge[i].Y);
 
         // Do not add them to the MST if they are children of the same parent
-        if (E != -1) { 
+        if (E != -1) {
             MST[cont++] = Edge[i];
             if (S[E] == N) break;
         }
@@ -272,27 +298,62 @@ int main() {
 
 <br />
 
-## Binary Search
+## Dijkstra
+
+- Time Complexity: O(ElogV), E <= V^2
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int BinarySearch(int arr[], int target, int N) {
-    int mid, L = 0, R = N - 1;
+typedef pair<int, int> pii;
 
-    while (L <= R) {
-        mid = L + (R - L) / 2;
+const int MAXN = 1e5+10;
+const int INF = 1e9+10;
 
-        if (arr[mid] == target)
-            return mid;
-        if (arr[mid] < target)
-            L = mid + 1;
-        else
-            R = mid - 1;        
+int n, m; // Nodes and Edges
+
+int dist[MAXN]; // Current distance in each node
+
+bool visited[MAXN]; // Visited nodes
+
+vector<pii> adj[MAXN]; // Adjacency list graph
+
+void Dijkstra(int S) {
+    // First part of the algorithm
+    for (int i = 1; i <= n; i++)
+        dist[i] = INF;
+    dist[S] = 0;
+
+    // Priority queue to store the current distances in ascending order
+    priority_queue<pii, vector<pii>, greater<pii>> pq;
+    // Initially, insert the root
+    pq.push(pii(0, S));
+
+    // When all nodes are visited, the queue is empty and the algorithm ends
+    while (!pq.empty()) {
+        // Second part of the algorithm
+        int u = pq.top().second;
+        pq.pop();
+
+        // Ignore visited nodes
+        if (visited[u])
+            continue;
+
+        // Mark the current node
+        visited[u] = 1;
+
+        for (auto V : adj[u]) {
+            int v = V.second, w = V.first;
+
+            // Third part of the algorithm
+            if (dist[v] > dist[u] + w) {
+                // Update the current distance of V and put it in the queue
+                dist[v] = dist[u] + w;
+                pq.push(pii(dist[v], v));
+            }
+        }
     }
-
-    return -1;
 }
 ```
 
