@@ -171,7 +171,7 @@ void BFS(int node) {
 
 <br />
 
-## Union-Find / Disjoint-Set data structure
+## Union-Find | Disjoint-Set
 
 ```cpp
 #include <bits/stdc++.h>
