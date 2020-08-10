@@ -8,17 +8,10 @@ def main():
         s = stdin.readline().strip().lower()
         for c in s:
             if 'a' <= c <= 'z':
-                d[c] -= 1
+                d[c] += 1
 
-        ans = ''
-        max_ocurrences = 1
-        for letter, ocurrences in d.items():
-            if ocurrences < max_ocurrences:
-                ans = letter
-                max_ocurrences = ocurrences
-            elif ocurrences == max_ocurrences:
-                ans += letter
-
+        max_ocurr = max(d.values())
+        ans = ''.join(letter for (letter, ocurr) in d.items() if ocurr == max_ocurr)
         stdout.write(''.join(sorted(ans)) + '\n')
 
 main()
