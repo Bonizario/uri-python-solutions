@@ -15,7 +15,7 @@
  * Timelimit: 2
 */
 
-// Solucao estilo Felipe, com Union retornando um inteiro, sem array mst
+// Union retornando um inteiro, sem array mst
 #include <iostream>
 #include <algorithm>
 #include <vector>

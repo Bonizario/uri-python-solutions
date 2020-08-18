@@ -5,9 +5,12 @@
 */
 
 // WRONG! WRONG! WRONG! WRONG! WRONG!
-// M = (L + R) / 2; (L + R) can cause an overflow, use L + (R - L)
+// M = (L + R) / 2; can cause an overflow, use L + (R - L)
 
-int binarySearch(int arr[], int target, int N) {
+#include <bits/stdc++.h>
+using namespace std;
+
+int binarySearch(const vector<int> &arr, int target, int N) {
     int mid, L = 0, R = N - 1;
 
     while (L <= R) {
@@ -26,7 +29,7 @@ int binarySearch(int arr[], int target, int N) {
 
 // Is x an square number?
 // Solution: binary search i in [0, x], checking if i*i == x
-int isSquareNumber(int arr[], int target, int N) {
+int isSquareNumber(const vector<int> &arr, int target, int N) {
     int mid, square;
     int L = 0, R = N - 1;
 
@@ -47,7 +50,7 @@ int isSquareNumber(int arr[], int target, int N) {
 
 // Lower bound, find first value >= x.
 // Solution: create ans; if arr[mid] >= x, ans = arr[mid], keep searching ans.
-int lowerBound(int arr[], int x, int N) {
+int lowerBound(const vector<int> &arr, int x, int N) {
     int mid;
     int L = 0, R = N - 1;
     int ans = -1;
@@ -68,7 +71,7 @@ int lowerBound(int arr[], int x, int N) {
 }
 // You should think about in which half the better option is!
 // In some problems, the order of the above if/else is reversed
-// We should think that 1 condition is satisfied or not for every element
+// 1 condition is satisfied or not for every element
 // E.g. [2,3,5,6,8,10,12], condition: x>=4
 // Then,[F,F,T,T,T,T,T]
 
@@ -76,12 +79,9 @@ int lowerBound(int arr[], int x, int N) {
 // Rotated array, someone rotated (shifted) a sorted array.
 // Find the smallest element. [2,3,6,7,9,15,19] -> [6,7,9,15,19,2,3]
 // We should compare the middle to the first and last
-#include <vector>
-
-int findMinRotatedArray(std::vector<int> nums) {
-    int N = nums.size(), mid;
+int findMinRotatedArray(const vector<int> &nums, int N) {
+    int mid, ans = -1;
     int L = 0, R = N - 1;
-    int ans = -1;
 
     while (L <= R) {
         mid = L + (R - L) / 2;
@@ -96,8 +96,3 @@ int findMinRotatedArray(std::vector<int> nums) {
 
     return ans;
 }
-
-
-// Find peak. The array increases and then decreases.
-// Find the maximum element. [2,3,4,6,9,12,11,8,6,4,1]
-// To Do
