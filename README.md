@@ -41,7 +41,7 @@
  - [Union-Find | Disjoint-Set](./algorithms/graphs/union_find.cpp)
  - [Kruskal](./algorithms/graphs/kruskal.cpp)
  - [Dijkstra](./algorithms/graphs/dijkstra.cpp)
- - [Floyd Warshall](./algorithms/graphs/floyd_warshall.cpp)
+ - [Floyd Warshall](./algorithms/graphs/floyd_warshall_path.py)
 
 <br />
 
