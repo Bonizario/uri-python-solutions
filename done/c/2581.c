@@ -1,15 +1,14 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
     int i, n;
-    char s;
     scanf("%d", &n);
 
     for (i = 0; i < n; i++)
     {
-        scanf("%c", &s);
-        printf("I am Toorg!\n");
+        puts("I am Toorg!");
     }
 
     return 0;

@@ -1,19 +1,16 @@
 #include <stdio.h>
 
-typedef long long unsigned int llu;
-llu factorial(llu);
+int factorial(int n)
+{
+    return (n <= 1 ? 1 : factorial(n - 1) * n);
+}
 
 int main(void)
 {
-    llu n;
-    scanf("%llu", &n);
+    int n;
+    scanf("%d", &n);
 
-    printf("%llu\n", factorial(n));
+    printf("%d\n", factorial(n));
 
     return 0;
-}
-
-llu factorial(llu n)
-{
-    return (n <= 1 ? 1 : factorial(n - 1) * n);
 }
