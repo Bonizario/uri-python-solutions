@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img alt="URI Online Judge" title="URI Online Judge" src="./.github/uri-logo.png">
 </p>
 
@@ -17,15 +17,15 @@
     <img alt="Made by gabriel-bonizario" src="https://img.shields.io/badge/made%20by-Gabriel%20Bonizario-dc2c34">
   </a>
 
-  <a href="https://github.com/bonizario/ecoleta/commits/master">
+  <a href="https://github.com/bonizario/uri-solutions/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/bonizario/uri-solutions?color=e54034">
   </a>
 
-  <a href="https://github.com/Bonizario/ecoleta/blob/master/LICENSE">
+  <a href="https://github.com/Bonizario/uri-solutions/blob/master/LICENSE">
     <img alt="License" src="https://img.shields.io/github/license/bonizario/uri-solutions?color=f0442c">
   </a>
 
-  <a href="https://github.com/Bonizario/be-the-hero/stargazers">
+  <a href="https://github.com/Bonizario/uri-solutions/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/bonizario/uri-solutions?style=social">
   </a>
 </p>
@@ -65,8 +65,6 @@
 
 # :postbox: Contact
 
-Made by **Gabriel Bonizário** 👋🏻
-
-**Linkedin**: [gabriel-bonizario](https://www.linkedin.com/in/gabriel-bonizario/)
+Made by **[Gabriel Bonizário](https://www.linkedin.com/in/gabriel-bonizario/)** 👋🏻
 
 ---
