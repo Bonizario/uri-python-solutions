@@ -4,3 +4,6 @@
 # C/C++ executables
 **/*.exe
 **/*.o
+
+# Python
+**/__pycache__
