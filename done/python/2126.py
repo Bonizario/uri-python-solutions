@@ -1,23 +1,24 @@
 def main():
+    from sys import stdout
+
     case = 1
     while True:
         try:
             substring = input()
             string = input()
-        except EOFError:
+        except Exception:
             break
 
-        print('Caso #{}:'.format(case))
+        stdout.write(f'Caso #{case}:\n')
 
         qtd = string.count(substring)
         last = string.rfind(substring)
 
         if qtd:
-            print('Qtd.Subsequencias: {}'.format(qtd))
-            print('Pos: {}'.format(last + 1))
+            stdout.write(f'Qtd.Subsequencias: {qtd}\n')
+            stdout.write(f'Pos: {last + 1}\n\n')
         else:
-            print('Nao existe subsequencia')
+            stdout.write('Nao existe subsequencia\n\n')
         case += 1
-        print()
 
 main()

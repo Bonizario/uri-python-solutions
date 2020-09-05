@@ -5,13 +5,11 @@ int main(void)
 {
     size_t tamanho;
     char s[11];
-    int ok, calc;
+    int calc;
 
     while (scanf("%s", s) != EOF)
     {
-        ok = 0;
         tamanho = strlen(s);
-
         switch (tamanho)
         {
             case 1:
