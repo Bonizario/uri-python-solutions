@@ -19,6 +19,7 @@ int main(void)
         {
             ok = 0;
         }
+
         for (i = 0; i < t && ok; i++)
         {
             if (((i <= 2) && (placa[i] < 'A' || placa[i] > 'Z')) ||
@@ -27,11 +28,13 @@ int main(void)
                 ok = 0;
             }
         }
+
         if (!ok)
         {
             printf("FAILURE\n");
             continue;
         }
+
         switch(placa[t - 1])
         {
             case '1': printf("MONDAY\n");    break;

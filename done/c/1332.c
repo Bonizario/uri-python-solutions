@@ -4,26 +4,27 @@
 int main(void)
 {
     int i, t, n;
+    char str[6];
+
     scanf("%d", &t);
 
-    char str[6];
     while (t--)
     {
         scanf("%s", str);
-
         n = strlen(str);
+
         if (n == 3)
         {
             if ((str[0] == 'o' &&
                 (str[1] == 'n' || str[2] == 'e')) ||
                 (str[1] == 'n' && str[2] == 'e'))
-                printf("1\n");
+                puts("1");
             else
-                printf("2\n");
+                puts("2");
         }
         else
         {
-            printf("3\n");
+            puts("3");
         }
     }
 

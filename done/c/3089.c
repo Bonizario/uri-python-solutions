@@ -1,23 +1,3 @@
-/**
- * #include <stdlib.h>
- * http://www.cplusplus.com/reference/cstdlib/qsort/
- *
- * const void * because we can sort different types of data
- * e.g.: structs, floats, doubles, not just int
- *
- * void qsort (void* base, size_t num, size_t size,
-            int (*compar)(const void*,const void*));
- *
- * < 0:  [a, b]
- * == 0: [a, b] (qsort is stable)
- * > 0:  [b, a]
- *
- * int cmp(const void *a, const void *b)
- * {
-      return (*(int*) a - *(int*) b);
- * }
- */
-
 #include <stdio.h>
 
 int main(void)
@@ -48,3 +28,23 @@ int main(void)
 
     return 0;
 }
+
+/**
+ * #include <stdlib.h>
+ * http://www.cplusplus.com/reference/cstdlib/qsort/
+ *
+ * const void * because we can sort different types of data
+ * e.g.: structs, floats, doubles, not just int
+ *
+ * void qsort (void* base, size_t num, size_t size,
+            int (*compar)(const void*,const void*));
+ *
+ * < 0:  [a, b]
+ * == 0: [a, b] (qsort is stable)
+ * > 0:  [b, a]
+ *
+ * int cmp(const void *a, const void *b)
+ * {
+      return (*(int*) a - *(int*) b);
+ * }
+ */

@@ -7,13 +7,11 @@ int main(void)
     char operacao[10];
 
     scanf("%d", &t);
-    getchar();
 
     while (t--)
     {
         scanf("%s", operacao);
         scanf("%d %d %d", &r, &g, &b);
-        getchar();
 
         if (strcmp(operacao, "min") == 0)
         {
@@ -31,6 +29,7 @@ int main(void)
         {
             cinza = (0.3 * r + 0.59 * g + 0.11 * b);
         }
+
         printf("Caso #%d: %d\n", caso++, cinza);
     }
 
