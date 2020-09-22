@@ -4,7 +4,6 @@ def main():
     body = False
     while True:
         try:
-
             line = stdin.readline()
             if not line:
                 break

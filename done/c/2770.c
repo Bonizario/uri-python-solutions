@@ -9,7 +9,7 @@ int main(void)
         while (m--)
         {
             scanf("%d %d", &xi, &yi);
-            if ((xi <= x && yi <= y) || (xi <= y && yi <= x))
+            if (xi <= x && yi <= y || xi <= y && yi <= x)
                 puts("Sim");
             else
                 puts("Nao");
