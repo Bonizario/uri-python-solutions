@@ -1,28 +1,25 @@
 # 1131 - Grenais
-another_grenal = 1
-inter_victories = 0
-gremio_victories = 0
-draws = 0
-total_of_grenais = 0
-while another_grenal != 2:
-    inter, gremio = map(int, input().split())
-    if (inter > gremio):
-        inter_victories += 1
-    elif (gremio > inter):
-        gremio_victories += 1
-    elif (gremio == inter):
-        draws += 1
-    total_of_grenais += 1
-    print("Novo grenal (1-sim 2-nao)")
-    another_grenal = int(input())
+grenal = 1
+scoreboard = [0, 0, 0]
 
-print("{} grenais".format(total_of_grenais))
-print("Inter:{}".format(inter_victories))
-print("Gremio:{}".format(gremio_victories))
-print("Empates:{}".format(draws))
-if (inter_victories > gremio_victories):
-    print("Inter venceu mais")
-elif (inter_victories < gremio_victories):
-    print("Gremio venceu mais")
-if (inter_victories == gremio_victories):
-    print("Não houve vencedor")
+while grenal != 2:
+    inter, gremio = map(int, input().split())
+    if inter > gremio:
+        scoreboard[0] += 1
+    elif gremio > inter:
+        scoreboard[1] += 1
+    elif gremio == inter:
+        scoreboard[2] += 1
+    grenal = int(input('Novo grenal (1-sim 2-nao)\n'))
+
+print('{} grenais'.format(sum(scoreboard)))
+print('Inter:{}'.format(scoreboard[0]))
+print('Gremio:{}'.format(scoreboard[1]))
+print('Empates:{}'.format(scoreboard[2]))
+
+if scoreboard[0] > scoreboard[1]:
+    print('Inter venceu mais')
+elif scoreboard[0] < scoreboard[1]:
+    print('Gremio venceu mais')
+else:
+    print('Não houve vencedor')
