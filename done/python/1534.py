@@ -1,19 +1,17 @@
-# 1534 - Array 123
-while True:
-    try:
-        N = int(input())
-        for i in range(N):
-            for j in range(N):
-                if i + j == N - 1:
-                    result = 2
-                    print(result, end='')
-                    continue
-                if i == j:
-                    result = 1
-                    print(result, end='')
+def main():
+    from sys import stdin, stdout
+    while True:
+        try:
+            n = int(stdin.readline())
+        except Exception:
+            break
+        for i in range(n):
+            for j in range(n):
+                if i + j == n - 1:
+                    stdout.write('2')
+                elif i == j:
+                    stdout.write('1')
                 else:
-                    result = 3
-                    print(result, end='')
-            print()
-    except EOFError:
-        break
+                    stdout.write('3')
+            stdout.write('\n')
+main()

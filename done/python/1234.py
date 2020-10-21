@@ -1,9 +1,9 @@
-# 1234 - STRINGS, UPPERCASE E LOWERCASE INTERCALADAS ([a-zA-Z] e ' ')
+# STRINGS, UPPERCASE E LOWERCASE INTERCALADAS ([a-zA-Z] e ' ')
 def main():
     from sys import stdout
     while True:
         try:
-            sentence = input() # using stdin.readline() causes an tle error
+            sentence = input() # stdin.readline() causes a TLE error
         except Exception:
             break
         counter = 0
@@ -12,13 +12,11 @@ def main():
             c = sentence[i]
             if c == ' ':
                 dancing += ' '
-            elif counter == 0:
+            elif not counter:
                 dancing += c.upper()
-                counter += 1
-            elif counter > 0:
+                counter ^= 1
+            else:
                 dancing += c.lower()
-                counter -= 1
+                counter ^= 1
         stdout.write('%s\n' % dancing)
-
-if __name__ == '__main__':
-    main()
+main()
