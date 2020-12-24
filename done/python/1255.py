@@ -2,14 +2,12 @@ def main():
     from sys import stdin, stdout
     from collections import defaultdict
 
-    n = int(stdin.readline())
-    for _ in range(n):
+    for _ in range(int(stdin.readline())):
         d = defaultdict(int)
         s = stdin.readline().strip().lower()
         for c in s:
             if 'a' <= c <= 'z':
                 d[c] += 1
-
         max_ocurr = max(d.values())
         ans = ''.join(letter for (letter, ocurr) in d.items() if ocurr == max_ocurr)
         stdout.write(''.join(sorted(ans)) + '\n')

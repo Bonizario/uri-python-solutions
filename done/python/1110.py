@@ -1,15 +1,18 @@
-# 1110 - Throwing Cards Away
-while True:
-    n = int(input())
-    if not n:
-        break
-    cards = [card for card in range(1, n + 1)]
-    discarded = []
-    while len(cards) > 1:
-        discarded.append(cards[0])
-        cards.pop(0)
-        cards.append(cards[0])
-        cards.pop(0)
+def main():
+    from sys import stdin, stdout
+    from collections import deque
 
-    print('Discarded cards: ' + ', '.join([str(disc) for disc in discarded]))
-    print('Remaining card: {}'.format(cards[0]))
+    while True:
+        n = int(stdin.readline())
+        if not n:
+            break
+        cards = deque(range(1, n + 1))
+        discarded = list()
+        while len(cards) > 1:
+            discarded.append(cards[0])
+            cards.popleft()
+            cards.append(cards[0])
+            cards.popleft()
+        stdout.write('Discarded cards: ' + ', '.join([str(disc) for disc in discarded]))
+        stdout.write('\nRemaining card: {}\n'.format(cards[0]))
+main()

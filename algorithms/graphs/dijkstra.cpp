@@ -18,7 +18,7 @@ vector<pii> adj[MAXN]; // Adjacency list graph
 void dijkstra(int S) {
     // First part of the algorithm
     for (int i = 1; i <= n; i++)
-        dist[i] = INF;
+        dist[i] = INF, visited[i] = false;
     dist[S] = 0;
 
     // Priority queue to store the current distances in ascending order
